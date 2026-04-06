@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CTK SUCCESS | บริการ</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f7faff; color: #181818; }
+    a { text-decoration: none; color: inherit; }
+    .container { width: min(1180px, 92%); margin: 0 auto; }
+    .topbar { background: #fff; border-bottom: 1px solid #e8eef8; }
+    .topbar-inner { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; gap: 20px; }
+    .brand { font-size: 22px; font-weight: 700; color: #1c52a3; }
+    .nav { display: flex; gap: 10px; flex-wrap: wrap; }
+    .nav a { padding: 10px 16px; border-radius: 999px; }
+    .nav a:hover, .nav a.active { background: #2b7af0; color: #fff; }
+    .section { padding: 60px 0; }
+    h1, h2, h3 { color: #1c52a3; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .card { background: #fff; border-radius: 24px; box-shadow: 0 10px 30px rgba(28,82,163,.10); overflow: hidden; }
+    .card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
+    .card-body { padding: 22px; }
+    @media (max-width: 980px) { .topbar-inner, .grid-3 { grid-template-columns: 1fr; display: grid; justify-items: center; } .nav { justify-content: center; } }
+  </style>
+</head>
+<body>
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a href="index.html" class="brand">CTK SUCCESS</a>
+    <nav class="nav">
+      <a href="index.html">หน้าแรก</a>
+      <a href="services.html" class="active">บริการ</a>
+      <a href="portfolio.html">ผลงาน</a>
+      <a href="contact.html">ติดต่อ</a>
+    </nav>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <h1>บริการของเรา</h1>
+    <p>เราพร้อมให้บริการด้านไอทีและงานสนับสนุนแบบครบวงจร เพื่อตอบโจทย์ทั้งภาครัฐและเอกชน</p>
+    <div class="grid-3">
+      <div class="card"><img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?q=80&w=1200&auto=format&fit=crop" alt="wifi"><div class="card-body"><h3>วางระบบ WIFI Hi-speed Internet</h3><p>ติดตั้งและวางระบบอินเทอร์เน็ตความเร็วสูงให้เหมาะกับพื้นที่ใช้งาน</p></div></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=1200&auto=format&fit=crop" alt="cctv"><div class="card-body"><h3>CCTV Installation</h3><p>ติดตั้งกล้องวงจรปิดครบวงจร ทั้งบ้าน ร้านค้า สำนักงาน และองค์กร</p></div></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop" alt="it support"><div class="card-body"><h3>IT Support</h3><p>ดูแล แก้ไข และบำรุงรักษาระบบไอทีให้พร้อมใช้งานอยู่เสมอ</p></div></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=1200&auto=format&fit=crop" alt="computer"><div class="card-body"><h3>จำหน่ายอุปกรณ์คอมพิวเตอร์</h3><p>จัดหาและจำหน่ายอุปกรณ์คอมพิวเตอร์และสินค้าไอทีตามความต้องการ</p></div></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1200&auto=format&fit=crop" alt="network"><div class="card-body"><h3>วางระบบ Network, Server, Firewall และให้คำปรึกษาด้าน IT</h3><p>ออกแบบและติดตั้งระบบเครือข่ายองค์กร</p><ul><li>วางระบบ LAN / Fiber</li><li>ติดตั้ง Server และ Firewall</li><li>ให้คำปรึกษาด้าน IT Infrastructure</li></ul></div></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1200&auto=format&fit=crop" alt="cleaning"><div class="card-body"><h3>บริการทำความสะอาด สำนักงาน และพื้นที่ขนาดใหญ่</h3><p>บริการทำความสะอาดครบวงจร</p><ul><li>สำนักงาน / อาคาร</li><li>พื้นที่ขนาดใหญ่</li><li>ทีมงานมืออาชีพ</li></ul></div></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop" alt="garden"><div class="card-body"><h3>บริการดูแลสวน</h3><p>ดูแลสวนและพื้นที่สีเขียวให้สวยงามและเป็นระเบียบ</p></div></div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
