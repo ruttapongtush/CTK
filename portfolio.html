@@ -2,51 +2,112 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CTK SUCCESS | ผลงาน</title>
   <style>
-    body { margin: 0; font-family: Arial, sans-serif; background: #f7faff; color: #181818; }
-    a { text-decoration: none; color: inherit; }
-    img { max-width: 100%; display: block; }
-    .container { width: min(1180px, 92%); margin: 0 auto; }
-    .topbar { background: #fff; border-bottom: 1px solid #e8eef8; }
-    .topbar-inner { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; gap: 20px; }
-    .brand { font-size: 22px; font-weight: 700; color: #1c52a3; }
-    .nav { display: flex; gap: 10px; flex-wrap: wrap; }
-    .nav a { padding: 10px 16px; border-radius: 999px; }
-    .nav a:hover, .nav a.active { background: #2b7af0; color: #fff; }
-    .section { padding: 60px 0; }
-    h1, h3 { color: #1c52a3; }
-    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-    .card { background: #fff; border-radius: 24px; box-shadow: 0 10px 30px rgba(28,82,163,.10); overflow: hidden; }
-    .card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
-    .card-body { padding: 22px; }
-    @media (max-width: 980px) { .topbar-inner, .grid-3 { grid-template-columns: 1fr; display: grid; justify-items: center; } .nav { justify-content: center; } }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7faff;
+      color: #181818;
+    }
+    .container {
+      width: 92%;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .topbar {
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      padding: 15px 0;
+      text-align: center;
+    }
+    .nav a {
+      margin: 0 8px;
+      padding: 8px 14px;
+      border-radius: 20px;
+      text-decoration: none;
+      color: #333;
+    }
+    .nav a.active {
+      background: #2b7af0;
+      color: #fff;
+    }
+    h1 {
+      color: #1c52a3;
+      margin-top: 30px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    }
+    .card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      display: block;
+    }
+    .card-body {
+      padding: 15px;
+      text-align: center;
+    }
+    @media(max-width:768px){
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
-<header class="topbar">
-  <div class="container topbar-inner">
-    <a href="index.html" class="brand">CTK SUCCESS</a>
-    <nav class="nav">
+
+  <div class="topbar">
+    <h2>CTK SUCCESS</h2>
+    <div class="nav">
       <a href="index.html">หน้าแรก</a>
       <a href="services.html">บริการ</a>
       <a href="portfolio.html" class="active">ผลงาน</a>
       <a href="contact.html">ติดต่อ</a>
-    </nav>
-  </div>
-</header>
-
-<section class="section">
-  <div class="container">
-    <h1>ผลงานของเรา</h1>
-    <p>หน้านี้ใช้ลงรูปหน้างานจริงของคุณ</p>
-    <div class="grid-3">
-      <div class="card"><img src="https://images.unsplash.com/photo-1580894908361-967195033215?q=80&w=1200&auto=format&fit=crop" alt="work 1"><div class="card-body"><h3>ผลงานที่ 1</h3><p>รายละเอียดผลงาน</p></div></div>
-      <div class="card"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1200&auto=format&fit=crop" alt="work 2"><div class="card-body"><h3>ผลงานที่ 2</h3><p>รายละเอียดผลงาน</p></div></div>
-      <div class="card"><img src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?q=80&w=1200&auto=format&fit=crop" alt="work 3"><div class="card-body"><h3>ผลงานที่ 3</h3><p>รายละเอียดผลงาน</p></div></div>
     </div>
   </div>
-</section>
+
+  <div class="container">
+    <h1>ผลงานของเรา</h1>
+    <p>ตัวอย่างผลงานจริงของทีมงาน</p>
+
+    <div class="grid">
+      <div class="card">
+        <img src="work1.jpg" alt="work 1">
+        <div class="card-body">
+          <h3>ผลงานที่ 1</h3>
+          <p>งานติดตั้งตู้และระบบควบคุม</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="work2.JPG" alt="work 2">
+        <div class="card-body">
+          <h3>ผลงานที่ 2</h3>
+          <p>งานเชื่อมต่อและจัดการสายภายในระบบ</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="work3.JPG" alt="work 3">
+        <div class="card-body">
+          <h3>ผลงานที่ 3</h3>
+          <p>งานเดินสายและติดตั้งอุปกรณ์หน้างาน</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
