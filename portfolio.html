@@ -33,7 +33,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 20px;
-      max-width: 1100px;
+      max-width: 1200px;
       margin: auto;
     }
 
@@ -63,7 +63,7 @@
     }
 
     .album-card .info h3 {
-      font-size: 18px;
+      font-size: 20px;
       margin-bottom: 6px;
     }
 
@@ -74,7 +74,7 @@
 
     .viewer {
       display: none;
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 35px auto 0;
       background: #fff;
       border-radius: 14px;
@@ -87,16 +87,7 @@
     }
 
     .viewer-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 15px;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
-    }
-
-    .viewer-top h2 {
-      font-size: 24px;
+      display: none;
     }
 
     .close-btn {
@@ -107,6 +98,7 @@
       border-radius: 8px;
       cursor: pointer;
       font-size: 14px;
+      margin-bottom: 20px;
     }
 
     .album-images {
@@ -163,39 +155,60 @@
 <body>
 
   <h1>ผลงานของเรา</h1>
-  <p class="sub">คลิกที่แต่ละผลงานเพื่อเปิดดูอัลบั้มรูป</p>
+  <p class="sub">คลิกที่แต่ละผลงานเพื่อเปิดดูหลายรูปในอัลบั้ม</p>
 
   <div class="album-list">
     <div class="album-card" onclick="openAlbum('album1')">
-      <img src="album1-1.JPG" alt="NETWORK SYSTEM">
+      <img src="album1-1.JPG" alt="NETWORK SYSTEM 1">
       <div class="info">
-        <h3>NETWORK SYSTEM </h3>
+        <h3>NETWORK SYSTEM 1</h3>
         <p>กดเพื่อดูหลายรูปในอัลบั้ม</p>
       </div>
     </div>
 
     <div class="album-card" onclick="openAlbum('album2')">
-      <img src="album2-1.JPG" alt="CCTV SYSTEM">
+      <img src="album2-1.JPG" alt="CCTV SYSTEM 2">
       <div class="info">
-        <h3>CCTV SYSTEM </h3>
+        <h3>CCTV SYSTEM 2</h3>
         <p>กดเพื่อดูหลายรูปในอัลบั้ม</p>
       </div>
     </div>
 
     <div class="album-card" onclick="openAlbum('album3')">
-      <img src="album3-1.JPG" alt="ผลงานที่ 3">
+      <img src="album3-1.JPG" alt="NETWORK SYSTEM 3">
       <div class="info">
-        <h3>ผลงานที่ 3</h3>
+        <h3>NETWORK SYSTEM 3</h3>
+        <p>กดเพื่อดูหลายรูปในอัลบั้ม</p>
+      </div>
+    </div>
+
+    <div class="album-card" onclick="openAlbum('album4')">
+      <img src="album4-1.JPG" alt="CCTV SYSTEM 4">
+      <div class="info">
+        <h3>CCTV SYSTEM 4</h3>
+        <p>กดเพื่อดูหลายรูปในอัลบั้ม</p>
+      </div>
+    </div>
+
+    <div class="album-card" onclick="openAlbum('album5')">
+      <img src="album5-1.JPG" alt="NETWORK SYSTEM 5">
+      <div class="info">
+        <h3>NETWORK SYSTEM 5</h3>
+        <p>กดเพื่อดูหลายรูปในอัลบั้ม</p>
+      </div>
+    </div>
+
+    <div class="album-card" onclick="openAlbum('album6')">
+      <img src="album6-1.JPG" alt="CCTV SYSTEM 6">
+      <div class="info">
+        <h3>CCTV SYSTEM 6</h3>
         <p>กดเพื่อดูหลายรูปในอัลบั้ม</p>
       </div>
     </div>
   </div>
 
   <div id="viewer" class="viewer">
-    <div class="viewer-top">
-      <h2 id="albumTitle">ชื่ออัลบั้ม</h2>
-      <button class="close-btn" onclick="closeAlbum()">ปิดอัลบั้ม</button>
-    </div>
+    <button class="close-btn" onclick="closeAlbum()">ปิดอัลบั้ม</button>
     <div id="albumImages" class="album-images"></div>
   </div>
 
@@ -207,7 +220,7 @@
   <script>
     const albums = {
       album1: {
-        title: "NETWORK SYSTEM",
+        title: "",
         images: [
           "album1-1.JPG",
           "album1-2.JPG",
@@ -215,7 +228,7 @@
         ]
       },
       album2: {
-        title: "CCTV SYSTEM",
+        title: "",
         images: [
           "album2-1.JPG",
           "album2-2.JPG",
@@ -223,11 +236,35 @@
         ]
       },
       album3: {
-        title: "SMART PARKING",
+        title: "",
         images: [
           "album3-1.JPG",
           "album3-2.JPG",
           "album3-3.JPG"
+        ]
+      },
+      album4: {
+        title: "",
+        images: [
+          "album4-1.JPG",
+          "album4-2.JPG",
+          "album4-3.JPG"
+        ]
+      },
+      album5: {
+        title: "",
+        images: [
+          "album5-1.JPG",
+          "album5-2.JPG",
+          "album5-3.JPG"
+        ]
+      },
+      album6: {
+        title: "",
+        images: [
+          "album6-1.JPG",
+          "album6-2.JPG",
+          "album6-3.JPG"
         ]
       }
     };
@@ -235,16 +272,14 @@
     function openAlbum(albumKey) {
       const album = albums[albumKey];
       const viewer = document.getElementById("viewer");
-      const albumTitle = document.getElementById("albumTitle");
       const albumImages = document.getElementById("albumImages");
 
-      albumTitle.textContent = album.title;
       albumImages.innerHTML = "";
 
       album.images.forEach(image => {
         const img = document.createElement("img");
         img.src = image;
-        img.alt = album.title;
+        img.alt = "";
         img.onclick = function(event) {
           event.stopPropagation();
           openLightbox(image);
