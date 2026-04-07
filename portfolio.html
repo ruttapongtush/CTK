@@ -167,7 +167,7 @@
 
   <div class="album-list">
     <div class="album-card" onclick="openAlbum('album1')">
-      <img src="album1-1.jpg" alt="ผลงานที่ 1">
+      <img src="album1-1.JPG" alt="ผลงานที่ 1">
       <div class="info">
         <h3>ผลงานที่ 1</h3>
         <p>กดเพื่อดูหลายรูปในอัลบั้ม</p>
@@ -175,7 +175,7 @@
     </div>
 
     <div class="album-card" onclick="openAlbum('album2')">
-      <img src="album2-1.jpg" alt="ผลงานที่ 2">
+      <img src="album2-1.JPG" alt="ผลงานที่ 2">
       <div class="info">
         <h3>ผลงานที่ 2</h3>
         <p>กดเพื่อดูหลายรูปในอัลบั้ม</p>
@@ -183,7 +183,7 @@
     </div>
 
     <div class="album-card" onclick="openAlbum('album3')">
-      <img src="album3-1.jpg" alt="ผลงานที่ 3">
+      <img src="album3-1.JPG" alt="ผลงานที่ 3">
       <div class="info">
         <h3>ผลงานที่ 3</h3>
         <p>กดเพื่อดูหลายรูปในอัลบั้ม</p>
@@ -209,26 +209,25 @@
       album1: {
         title: "ผลงานที่ 1",
         images: [
-          "album1-1.jpg",
-          "album1-2.jpg",
-          "album1-3.jpg",
-          "album1-4.jpg"
+          "album1-1.JPG",
+          "album1-2.JPG",
+          "album1-3.JPG"
         ]
       },
       album2: {
         title: "ผลงานที่ 2",
         images: [
-          "album2-1.jpg",
-          "album2-2.jpg",
-          "album2-3.jpg"
+          "album2-1.JPG",
+          "album2-2.JPG",
+          "album2-3.JPG"
         ]
       },
       album3: {
         title: "ผลงานที่ 3",
         images: [
-          "album3-1.jpg",
-          "album3-2.jpg",
-          "album3-3.jpg"
+          "album3-1.JPG",
+          "album3-2.JPG",
+          "album3-3.JPG"
         ]
       }
     };
@@ -246,7 +245,8 @@
         const img = document.createElement("img");
         img.src = image;
         img.alt = album.title;
-        img.onclick = function() {
+        img.onclick = function(event) {
+          event.stopPropagation();
           openLightbox(image);
         };
         albumImages.appendChild(img);
