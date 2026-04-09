@@ -1,107 +1,434 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CTK SUCCESS | หน้าแรก</title>
+  <title>CTK SUCCESS</title>
   <style>
-    :root {
-      --primary: #2b7af0;
-      --primary-dark: #1c52a3;
-      --text: #181818;
-      --muted: #6b7280;
-      --bg: #f7faff;
-      --line: #e8eef8;
-      --shadow: 0 10px 30px rgba(28, 82, 163, 0.10);
-      --radius: 24px;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
     }
-    * { box-sizing: border-box; }
-    body { margin: 0; font-family: Arial, sans-serif; color: var(--text); background: var(--bg); }
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
-    .container { width: min(1180px, 92%); margin: 0 auto; }
-    .topbar { position: sticky; top: 0; z-index: 1000; background: rgba(255,255,255,.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
-    .topbar-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 14px 0; }
-    .brand { font-weight: 700; color: var(--primary-dark); font-size: 22px; }
-    .nav { display: flex; gap: 10px; flex-wrap: wrap; }
-    .nav a { padding: 10px 16px; border-radius: 999px; }
-    .nav a.active, .nav a:hover { background: var(--primary); color: #fff; }
-    .hero { padding: 70px 0; }
-    .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 24px; }
-    .card { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); }
-    .hero-card {
-      padding: 40px;
-      min-height: 420px;
+
+    body {
+      background: #f5f7fa;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #ffffff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: auto;
+      padding: 16px 20px;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background:
-        linear-gradient(rgba(255,255,255,.90), rgba(255,255,255,.95)),
-        url('https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
     }
-    .eyebrow { display: inline-block; background: #eaf2ff; color: var(--primary-dark); padding: 8px 12px; border-radius: 999px; font-size: 13px; font-weight: 700; margin-bottom: 16px; }
-    h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); margin: 0 0 10px; color: var(--primary-dark); }
-    h2 { color: var(--primary-dark); }
-    p { line-height: 1.7; }
-    .slogan { font-weight: 700; color: var(--primary-dark); margin-bottom: 14px; }
-    .btn-row { display: flex; gap: 12px; margin-top: 10px; flex-wrap: wrap; }
-    .btn { padding: 12px 20px; border-radius: 999px; font-weight: 700; display: inline-block; }
-    .btn-primary { background: var(--primary); color: #fff; }
-    .btn-secondary { border: 1px solid #dce8ff; background:#fff; color: var(--primary-dark); }
-    .panel { padding: 24px; }
-    .footer { background: var(--primary-dark); color: #fff; padding: 30px 0; margin-top: 40px; }
-    @media (max-width: 980px) {
-      .hero-grid { grid-template-columns: 1fr; }
-      .topbar-inner { flex-direction: column; }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 800;
+      color: #2f5fb8;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      color: #2f5fb8;
+    }
+
+    .hero {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 50px 40px;
+      min-height: 500px;
+      border-radius: 30px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(rgba(255,255,255,0.70), rgba(255,255,255,0.70)),
+        url("hero.JPG");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: 56px;
+      line-height: 1.15;
+      color: #2f5fb8;
+      margin-bottom: 20px;
+      font-weight: 800;
+    }
+
+    .company-slogan {
+      display: inline-block;
+      margin-bottom: 24px;
+      padding: 16px 30px;
+      font-size: 30px;
+      font-weight: 900;
+      line-height: 1.4;
+      color: #ffffff;
+      background: linear-gradient(135deg, #2f5fb8, #3b82f6);
+      border-radius: 999px;
+      box-shadow: 0 10px 24px rgba(47,95,184,0.28);
+      letter-spacing: 0.6px;
+    }
+
+    .hero p {
+      font-size: 19px;
+      line-height: 1.8;
+      color: #222;
+      margin-bottom: 28px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: #3b82f6;
+      color: #fff;
+    }
+
+    .btn-outline {
+      border: 2px solid #cfdcf8;
+      color: #2f5fb8;
+      background: rgba(255,255,255,0.85);
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 42px;
+      font-weight: 800;
+      color: #2f5fb8;
+      margin-bottom: 14px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 40px;
+      color: #555;
+      font-size: 18px;
+    }
+
+    .services {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+    }
+
+    .service-card {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .service-card .content {
+      padding: 20px;
+    }
+
+    .service-card h3 {
+      font-size: 22px;
+      color: #2f5fb8;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: #555;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .highlights {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 40px;
+      background: #fff;
+      border-radius: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .highlights-text {
+      margin-bottom: 28px;
+    }
+
+    .highlights h2 {
+      font-size: 46px;
+      color: #2f5fb8;
+      margin-bottom: 18px;
+      font-weight: 800;
+    }
+
+    .highlights p {
+      font-size: 22px;
+      line-height: 1.8;
+      color: #222;
+    }
+
+    .highlights-image img {
+      width: 100%;
+      height: 430px;
+      object-fit: cover;
+      display: block;
+      border-radius: 24px;
+    }
+
+    .cta {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 50px 30px;
+      text-align: center;
+      background: linear-gradient(135deg, #2f5fb8, #3b82f6);
+      border-radius: 30px;
+      color: white;
+    }
+
+    .cta h2 {
+      font-size: 40px;
+      margin-bottom: 16px;
+    }
+
+    .cta p {
+      font-size: 18px;
+      margin-bottom: 24px;
+    }
+
+    .cta .btn {
+      background: #fff;
+      color: #2f5fb8;
+    }
+
+    footer {
+      margin-top: 60px;
+      background: #111827;
+      color: #fff;
+      text-align: center;
+      padding: 24px 20px;
+      font-size: 15px;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero {
+        margin: 20px 16px;
+        padding: 30px 22px;
+        min-height: auto;
+        border-radius: 22px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .company-slogan {
+        font-size: 18px;
+        padding: 12px 18px;
+        margin-bottom: 18px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
+
+      .section-subtitle {
+        font-size: 16px;
+        padding: 0 14px;
+      }
+
+      .services {
+        padding: 0 16px;
+      }
+
+      .highlights {
+        margin: 40px 16px;
+        padding: 24px;
+        border-radius: 22px;
+      }
+
+      .highlights h2 {
+        font-size: 30px;
+      }
+
+      .highlights p {
+        font-size: 16px;
+      }
+
+      .highlights-image img {
+        height: auto;
+      }
+
+      .cta {
+        margin: 40px 16px;
+        padding: 36px 20px;
+        border-radius: 22px;
+      }
+
+      .cta h2 {
+        font-size: 28px;
+      }
+
+      .cta p {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
 <body>
-<header class="topbar">
-  <div class="container topbar-inner">
-    <div class="brand">CTK SUCCESS</div>
-    <nav class="nav">
-      <a class="active" href="index.html">หน้าแรก</a>
-      <a href="services.html">บริการ</a>
-      <a href="portfolio.html">ผลงาน</a>
-      <a href="contact.html">ติดต่อ</a>
-    </nav>
-  </div>
-</header>
 
-<section class="hero">
-  <div class="container hero-grid">
-    <div class="hero-card card">
-      <span class="eyebrow">YOUR BUSINESS WEBSITE</span>
-      <h1>เราเป็นผู้เชี่ยวชาญด้านไอที</h1>
-      <p class="slogan">Think quality, Think of us</p>
-      <p>ให้บริการด้านไอทีครบวงจร เช่น Network, Server, Firewall, Fiber และ CCTV พร้อมออกแบบ ติดตั้ง และดูแลระบบโดยทีมงานมืออาชีพ</p>
-      <div class="btn-row">
-        <a class="btn btn-primary" href="portfolio.html">ดูผลงาน</a>
-        <a class="btn btn-secondary" href="contact.html">ติดต่อเรา</a>
+  <header>
+    <div class="navbar">
+      <a href="index.html" class="logo">CTK SUCCESS</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>We Are Experts<br>In IT Solutions</h1>
+      <div class="company-slogan">Think quality, Think of us</div>
+      <p>
+        We provide complete IT services including Network, Server, Firewall,
+        Fiber Optic, CCTV, installation, system design, and professional support.
+      </p>
+      <div class="hero-buttons">
+        <a href="portfolio.html" class="btn btn-primary">View Portfolio</a>
+        <a href="contact.html" class="btn btn-outline">Contact Us</a>
       </div>
     </div>
+  </section>
 
-    <div class="card panel">
-      <h2>จุดเด่นของเรา</h2>
-      <p>เรามุ่งเน้นพัฒนาศักยภาพของทีมงาน เพื่อให้งานออกมามีคุณภาพสูงสุด พร้อมบริการที่รวดเร็ว เชื่อถือได้ และตอบโจทย์การใช้งานจริงของลูกค้า</p>
-      <img src="https://images.unsplash.com/photo-1581092335397-9583eb92d232?q=80&w=1200&auto=format&fit=crop" alt="team" style="border-radius:16px; margin-top:16px;">
+  <section class="services">
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-subtitle">
+      Professional IT solutions for homes, offices, stores, factories, and organizations.
+    </p>
+
+    <div class="service-grid">
+      <div class="service-card">
+        <img src="service1.JPG" alt="Network System">
+        <div class="content">
+          <h3>Network System</h3>
+          <p>Installation and setup of LAN, Wi-Fi, routers, switches, and complete network systems.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="service2.JPG" alt="CCTV Installation">
+        <div class="content">
+          <h3>CCTV Installation</h3>
+          <p>Security camera installation for homes, offices, shops, and industrial areas.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="service3.JPG" alt="Fiber Optic">
+        <div class="content">
+          <h3>Fiber Optic</h3>
+          <p>Fiber optic cable installation, splicing, and testing for stable high-speed connectivity.</p>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer class="footer">
-  <div class="container">
-    <h3>ติดต่อเรา</h3>
-    <p><strong>บริษัท ซีทีเค ซัคเซซ จำกัด (สำนักงานใหญ่)</strong></p>
-    <p>115 หมู่ 7 ตำบลทะเลชุบศร อำเภอเมือง จังหวัดลพบุรี 15000</p>
-    <p>โทร: 036-680750</p>
-    <p>อีเมล: info@ctksuccess.co.th</p>
-    <p>Facebook: CTK Success co.,ltd.</p>
-    <p>YouTube: @CTKsuccess</p>
-    <p>TikTok: @ctk.success</p>
-    <p>เว็บไซต์: ctksuccess.co.th</p>
-  </div>
-</footer>
+  <section class="highlights">
+    <div class="highlights-text">
+      <h2>why_choose_us.JPG</h2>
+      <p>
+        We focus on quality, reliability, and professional service. Our team is committed
+        to delivering practical IT solutions that match real customer needs, with careful
+        installation, fast support, and attention to every detail.
+      </p>
+    </div>
+
+    <div class="highlights-image">
+      <img src="highlight-main.JPG" alt="why_choose_us.JPGs">
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Need IT Solutions for Your Business?</h2>
+    <p>Contact us today for consultation, installation, and complete support.</p>
+    <a href="contact.html" class="btn">Get in Touch</a>
+  </section>
+
+  <footer>
+    <p>© 2026 CTK SUCCESS. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
