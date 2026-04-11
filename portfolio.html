@@ -18,6 +18,50 @@
       padding: 20px;
     }
 
+    header {
+      background: #ffffff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      margin: -20px -20px 30px -20px;
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: auto;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 800;
+      color: #2f5fb8;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      color: #2f5fb8;
+    }
+
     h1 {
       text-align: center;
       margin-bottom: 10px;
@@ -124,7 +168,7 @@
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(0,0,0,0.85);
+      background: rgba(0,0,0,0.88);
       justify-content: center;
       align-items: center;
       padding: 20px;
@@ -135,10 +179,21 @@
       display: flex;
     }
 
+    .lightbox-content {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 1200px;
+    }
+
     .lightbox img {
-      max-width: 95%;
+      max-width: 90%;
       max-height: 90vh;
       border-radius: 12px;
+      display: block;
+      margin: auto;
     }
 
     .lightbox-close {
@@ -149,10 +204,75 @@
       color: #fff;
       cursor: pointer;
       font-weight: bold;
+      z-index: 1001;
+    }
+
+    .nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.18);
+      color: #fff;
+      border: none;
+      font-size: 34px;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .nav-btn:hover {
+      background: rgba(255,255,255,0.32);
+    }
+
+    .prev-btn {
+      left: 20px;
+    }
+
+    .next-btn {
+      right: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-btn {
+        width: 44px;
+        height: 44px;
+        font-size: 28px;
+      }
+
+      .prev-btn {
+        left: 8px;
+      }
+
+      .next-btn {
+        right: 8px;
+      }
+
+      .lightbox img {
+        max-width: 82%;
+      }
     }
   </style>
 </head>
 <body>
+
+  <header>
+    <div class="navbar">
+      <a href="index.html" class="logo">CTK SUCCESS</a>
+      <nav>
+        <a href="index.html">หน้าแรก</a>
+        <a href="services.html">บริการ</a>
+        <a href="portfolio.html">ผลงาน</a>
+        <a href="contact.html">ติดต่อ</a>
+      </nav>
+    </div>
+  </header>
 
   <h1>ผลงานของเรา</h1>
   <p class="sub">คลิกที่แต่ละผลงานเพื่อเปิดดูหลายรูปในอัลบั้ม</p>
@@ -161,15 +281,15 @@
     <div class="album-card" onclick="openAlbum('album1')">
       <img src="album1-1.JPG" alt="NETWORK SYSTEM">
       <div class="info">
-        <h3>NETWORK SYSTEM </h3>
+        <h3>NETWORK SYSTEM</h3>
         <p>กดเพื่อดูหลายรูปในอัลบั้ม</p>
       </div>
     </div>
 
     <div class="album-card" onclick="openAlbum('album2')">
-      <img src="album2-1.JPG" alt="CCTV SYSTEM ">
+      <img src="album2-1.JPG" alt="CCTV SYSTEM">
       <div class="info">
-        <h3>CCTV SYSTEM </h3>
+        <h3>CCTV SYSTEM</h3>
         <p>กดเพื่อดูหลายรูปในอัลบั้ม</p>
       </div>
     </div>
@@ -213,8 +333,13 @@
   </div>
 
   <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <span class="lightbox-close">&times;</span>
-    <img id="lightboxImg" src="" alt="รูปขยาย">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+      <button class="nav-btn prev-btn" onclick="prevImage(event)">❮</button>
+      <img id="lightboxImg" src="" alt="รูปขยาย">
+      <button class="nav-btn next-btn" onclick="nextImage(event)">❯</button>
+    </div>
   </div>
 
   <script>
@@ -298,6 +423,9 @@
       }
     };
 
+    let currentAlbumImages = [];
+    let currentImageIndex = 0;
+
     function openAlbum(albumKey) {
       const album = albums[albumKey];
       const viewer = document.getElementById("viewer");
@@ -305,13 +433,13 @@
 
       albumImages.innerHTML = "";
 
-      album.images.forEach(image => {
+      album.images.forEach((image, index) => {
         const img = document.createElement("img");
         img.src = image;
         img.alt = "";
         img.onclick = function(event) {
           event.stopPropagation();
-          openLightbox(image);
+          openLightbox(album.images, index);
         };
         albumImages.appendChild(img);
       });
@@ -324,14 +452,49 @@
       document.getElementById("viewer").classList.remove("active");
     }
 
-    function openLightbox(imageSrc) {
-      document.getElementById("lightboxImg").src = imageSrc;
+    function openLightbox(images, index) {
+      currentAlbumImages = images;
+      currentImageIndex = index;
+      document.getElementById("lightboxImg").src = currentAlbumImages[currentImageIndex];
       document.getElementById("lightbox").classList.add("active");
     }
 
     function closeLightbox() {
       document.getElementById("lightbox").classList.remove("active");
     }
+
+    function prevImage(event) {
+      event.stopPropagation();
+      if (currentAlbumImages.length === 0) return;
+      currentImageIndex = (currentImageIndex - 1 + currentAlbumImages.length) % currentAlbumImages.length;
+      document.getElementById("lightboxImg").src = currentAlbumImages[currentImageIndex];
+    }
+
+    function nextImage(event) {
+      event.stopPropagation();
+      if (currentAlbumImages.length === 0) return;
+      currentImageIndex = (currentImageIndex + 1) % currentAlbumImages.length;
+      document.getElementById("lightboxImg").src = currentAlbumImages[currentImageIndex];
+    }
+
+    document.addEventListener("keydown", function(event) {
+      const lightbox = document.getElementById("lightbox");
+      if (!lightbox.classList.contains("active")) return;
+
+      if (event.key === "ArrowLeft") {
+        currentImageIndex = (currentImageIndex - 1 + currentAlbumImages.length) % currentAlbumImages.length;
+        document.getElementById("lightboxImg").src = currentAlbumImages[currentImageIndex];
+      }
+
+      if (event.key === "ArrowRight") {
+        currentImageIndex = (currentImageIndex + 1) % currentAlbumImages.length;
+        document.getElementById("lightboxImg").src = currentAlbumImages[currentImageIndex];
+      }
+
+      if (event.key === "Escape") {
+        closeLightbox();
+      }
+    });
   </script>
 
 </body>
