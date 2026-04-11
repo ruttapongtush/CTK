@@ -79,17 +79,20 @@
       padding: 10px 16px;
       border-radius: 999px;
       font-weight: 400;
+      color: var(--primary-dark);
+      transition: 0.2s ease;
     }
 
     .nav a.active,
     .nav a:hover {
       background: var(--primary);
-      color: var(--primary-dark);
+      color: #fff;
     }
 
     h1 {
       text-align: center;
       margin-bottom: 10px;
+      font-size: clamp(2rem, 4vw, 3rem);
       color: var(--primary-dark);
       font-weight: 700;
     }
@@ -99,6 +102,7 @@
       color: var(--muted);
       margin-bottom: 30px;
       line-height: 1.7;
+      font-size: 16px;
     }
 
     .album-list {
@@ -271,7 +275,7 @@
       }
 
       .sub {
-        font-size: 16px;
+        font-size: 15px;
       }
 
       .nav-btn {
