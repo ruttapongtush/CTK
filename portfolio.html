@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio - CTK SUCCESS</title>
+  <title>CTK SUCCESS | ผลงาน</title>
   <style>
     :root {
       --primary: #2b7af0;
@@ -142,6 +142,7 @@
       font-size: 20px;
       margin-bottom: 6px;
       font-weight: 700;
+      color: var(--primary-dark);
     }
 
     .album-card .info p {
@@ -161,6 +162,13 @@
 
     .viewer.active {
       display: block;
+    }
+
+    .viewer-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 18px;
     }
 
     .close-btn {
@@ -187,6 +195,7 @@
       border-radius: 12px;
       cursor: pointer;
       transition: transform 0.2s ease;
+      background: #eef4ff;
     }
 
     .album-images img:hover {
@@ -223,6 +232,7 @@
       border-radius: 12px;
       display: block;
       margin: auto;
+      background: #fff;
     }
 
     .lightbox-close {
@@ -278,6 +288,10 @@
         font-size: 15px;
       }
 
+      .viewer-title {
+        font-size: 22px;
+      }
+
       .nav-btn {
         width: 44px;
         height: 44px;
@@ -316,48 +330,48 @@
   <p class="sub">คลิกที่แต่ละผลงานเพื่อเปิดดูหลายรูปในอัลบั้ม</p>
 
   <div class="album-list">
-    <div class="album-card" onclick="openAlbum('album1')">
-      <img src="album1-1.JPG" alt="NETWORK SYSTEM">
+    <div class="album-card" onclick="openAlbum('networksystem')">
+      <img src="images/networksystem/network1.jpg" alt="NETWORK SYSTEM">
       <div class="info">
         <h3>NETWORK SYSTEM</h3>
         <p>กดเพื่อดูหลายรูปในอัลบั้ม</p>
       </div>
     </div>
 
-    <div class="album-card" onclick="openAlbum('album2')">
-      <img src="album2-1.JPG" alt="CCTV SYSTEM">
+    <div class="album-card" onclick="openAlbum('cctvsystem')">
+      <img src="images/cctvsystem/cctv1.jpg" alt="CCTV SYSTEM">
       <div class="info">
         <h3>CCTV SYSTEM</h3>
         <p>กดเพื่อดูหลายรูปในอัลบั้ม</p>
       </div>
     </div>
 
-    <div class="album-card" onclick="openAlbum('album3')">
-      <img src="album3-1.JPG" alt="SMART PARKING">
+    <div class="album-card" onclick="openAlbum('smartparking')">
+      <img src="images/smartparking/smartparking1.JPG" alt="SMART PARKING">
       <div class="info">
         <h3>SMART PARKING</h3>
         <p>กดเพื่อดูหลายรูปในอัลบั้ม</p>
       </div>
     </div>
 
-    <div class="album-card" onclick="openAlbum('album4')">
-      <img src="album4-1.JPG" alt="WIFI HOTSPOT SYSTEM">
+    <div class="album-card" onclick="openAlbum('wifihotspotsystem')">
+      <img src="images/wifihotspotsystem/wifihotspot1.jpg" alt="WIFI HOTSPOT SYSTEM">
       <div class="info">
         <h3>WIFI HOTSPOT SYSTEM</h3>
         <p>กดเพื่อดูหลายรูปในอัลบั้ม</p>
       </div>
     </div>
 
-    <div class="album-card" onclick="openAlbum('album5')">
-      <img src="album5-1.JPG" alt="CLEANING SERVICE">
+    <div class="album-card" onclick="openAlbum('cleaningservice')">
+      <img src="images/cleaningservice/cleaning1.JPG" alt="CLEANING SERVICE">
       <div class="info">
         <h3>CLEANING SERVICE</h3>
         <p>กดเพื่อดูหลายรูปในอัลบั้ม</p>
       </div>
     </div>
 
-    <div class="album-card" onclick="openAlbum('album6')">
-      <img src="album6-1.JPG" alt="GARDENING SERVICE">
+    <div class="album-card" onclick="openAlbum('gardening')">
+      <img src="images/gardening/gardening1.jpg" alt="GARDENING SERVICE">
       <div class="info">
         <h3>GARDENING SERVICE</h3>
         <p>กดเพื่อดูหลายรูปในอัลบั้ม</p>
@@ -367,6 +381,7 @@
 
   <div id="viewer" class="viewer">
     <button class="close-btn" onclick="closeAlbum()">ปิดอัลบั้ม</button>
+    <h2 id="viewerTitle" class="viewer-title"></h2>
     <div id="albumImages" class="album-images"></div>
   </div>
 
@@ -382,81 +397,81 @@
 
   <script>
     const albums = {
-      album1: {
+      networksystem: {
         title: "NETWORK SYSTEM",
         images: [
-          "album1-1.JPG",
-          "album1-2.JPG",
-          "album1-3.JPG",
-          "album1-4.jpg",
-          "album1-5.JPG",
-          "album1-6.JPG",
-          "album1-7.JPG",
-          "album1-8.jpg",
-          "album1-9.JPG"
+          "images/networksystem/network1.jpg",
+          "images/networksystem/network2.jpg",
+          "images/networksystem/network3.jpg",
+          "images/networksystem/network4.jpg",
+          "images/networksystem/network5.jpg",
+          "images/networksystem/network6.jpg",
+          "images/networksystem/network7.jpg",
+          "images/networksystem/network8.jpg",
+          "images/networksystem/network9.jpg"
         ]
       },
-      album2: {
+      cctvsystem: {
         title: "CCTV SYSTEM",
         images: [
-          "album2-1.JPG",
-          "album2-2.JPG",
-          "album2-3.JPG",
-          "album2-4.JPG",
-          "album2-5.JPG",
-          "album2-6.JPG",
-          "album2-7.JPG",
-          "album2-8.JPG",
-          "album2-9.JPG",
-          "album2-10.JPG"
+          "images/cctvsystem/cctv1.jpg",
+          "images/cctvsystem/cctv2.jpg",
+          "images/cctvsystem/cctv3.jpg",
+          "images/cctvsystem/cctv4.jpg",
+          "images/cctvsystem/cctv5.jpg",
+          "images/cctvsystem/cctv6.jpg",
+          "images/cctvsystem/cctv7.jpg",
+          "images/cctvsystem/cctv8.jpg",
+          "images/cctvsystem/cctv9.jpg",
+          "images/cctvsystem/cctv10.jpg"
         ]
       },
-      album3: {
+      smartparking: {
         title: "SMART PARKING",
         images: [
-          "album3-1.JPG",
-          "album3-2.JPG",
-          "album3-3.JPG",
-          "album3-4.JPG",
-          "album3-5.JPG",
-          "album3-6.JPG",
-          "album3-7.JPG",
-          "album3-8.JPG"
+          "images/smartparking/smartparking1.JPG",
+          "images/smartparking/smartparking2.JPG",
+          "images/smartparking/smartparking3.jpg",
+          "images/smartparking/smartparking4.jpg",
+          "images/smartparking/smartparking5.jpg",
+          "images/smartparking/smartparking6.jpg",
+          "images/smartparking/smartparking7.jpg",
+          "images/smartparking/smartparking8.jpg"
         ]
       },
-      album4: {
+      wifihotspotsystem: {
         title: "WIFI HOTSPOT SYSTEM",
         images: [
-          "album4-1.JPG",
-          "album4-2.JPG",
-          "album4-3.JPG",
-          "album4-4.JPG",
-          "album4-5.JPG",
-          "album4-6.JPG",
-          "album4-7.JPG",
-          "album4-8.JPG"
+          "images/wifihotspotsystem/wifihotspot1.jpg",
+          "images/wifihotspotsystem/wifihotspot2.jpg",
+          "images/wifihotspotsystem/wifihotspot3.jpg",
+          "images/wifihotspotsystem/wifihotspot4.jpg",
+          "images/wifihotspotsystem/wifihotspot5.jpg",
+          "images/wifihotspotsystem/wifihotspot6.jpg",
+          "images/wifihotspotsystem/wifihotspot7.jpg",
+          "images/wifihotspotsystem/wifihotspot8.jpg"
         ]
       },
-      album5: {
+      cleaningservice: {
         title: "CLEANING SERVICE",
         images: [
-          "album5-1.JPG",
-          "album5-2.JPG",
-          "album5-3.JPG"
+          "images/cleaningservice/cleaning1.JPG",
+          "images/cleaningservice/cleaning2.jpg",
+          "images/cleaningservice/cleaning3.jpg"
         ]
       },
-      album6: {
+      gardening: {
         title: "GARDENING SERVICE",
         images: [
-          "album6-1.JPG",
-          "album6-2.JPG",
-          "album6-3.JPG",
-          "album6-4.JPG",
-          "album6-5.JPG",
-          "album6-6.JPG",
-          "album6-7.JPG",
-          "album6-8.JPG",
-          "album6-9.JPG"
+          "images/gardening/gardening1.jpg",
+          "images/gardening/gardening2.jpg",
+          "images/gardening/gardening3.jpg",
+          "images/gardening/gardening4.jpg",
+          "images/gardening/gardening5.jpg",
+          "images/gardening/gardening6.jpg",
+          "images/gardening/gardening7.jpg",
+          "images/gardening/gardening8.jpg",
+          "images/gardening/gardening9.jpg"
         ]
       }
     };
@@ -468,13 +483,17 @@
       const album = albums[albumKey];
       const viewer = document.getElementById("viewer");
       const albumImages = document.getElementById("albumImages");
+      const viewerTitle = document.getElementById("viewerTitle");
 
+      if (!album) return;
+
+      viewerTitle.textContent = album.title;
       albumImages.innerHTML = "";
 
       album.images.forEach((image, index) => {
         const img = document.createElement("img");
         img.src = image;
-        img.alt = "";
+        img.alt = album.title + " " + (index + 1);
         img.onclick = function(event) {
           event.stopPropagation();
           openLightbox(album.images, index);
