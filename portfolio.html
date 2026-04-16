@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CTK SUCCESS | ผลงาน</title>
+  <title>Portfolio - CTK SUCCESS</title>
   <style>
     :root {
       --primary: #2b7af0;
@@ -142,7 +142,6 @@
       font-size: 20px;
       margin-bottom: 6px;
       font-weight: 700;
-      color: var(--primary-dark);
     }
 
     .album-card .info p {
@@ -317,48 +316,48 @@
   <p class="sub">คลิกที่แต่ละผลงานเพื่อเปิดดูหลายรูปในอัลบั้ม</p>
 
   <div class="album-list">
-    <div class="album-card" onclick="openAlbum('networksystem')">
-      <img src="images/networksystem/network1.jpg" alt="NETWORK SYSTEM">
+    <div class="album-card" onclick="openAlbum('album1')">
+      <img src="album1-1.JPG" alt="NETWORK SYSTEM">
       <div class="info">
         <h3>NETWORK SYSTEM</h3>
         <p>กดเพื่อดูหลายรูปในอัลบั้ม</p>
       </div>
     </div>
 
-    <div class="album-card" onclick="openAlbum('cctvsystem')">
-      <img src="images/cctvsystem/cctv1.JPG" alt="CCTV SYSTEM">
+    <div class="album-card" onclick="openAlbum('album2')">
+      <img src="album2-1.JPG" alt="CCTV SYSTEM">
       <div class="info">
         <h3>CCTV SYSTEM</h3>
         <p>กดเพื่อดูหลายรูปในอัลบั้ม</p>
       </div>
     </div>
 
-    <div class="album-card" onclick="openAlbum('smartparking')">
-      <img src="images/smartparking/smartparking1.JPG" alt="SMART PARKING">
+    <div class="album-card" onclick="openAlbum('album3')">
+      <img src="album3-1.JPG" alt="SMART PARKING">
       <div class="info">
         <h3>SMART PARKING</h3>
         <p>กดเพื่อดูหลายรูปในอัลบั้ม</p>
       </div>
     </div>
 
-    <div class="album-card" onclick="openAlbum('wifihotspotsystem')">
-      <img src="images/wifihotspotsystem/wifihotspot1.jpg" alt="WIFI HOTSPOT SYSTEM">
+    <div class="album-card" onclick="openAlbum('album4')">
+      <img src="album4-1.JPG" alt="WIFI HOTSPOT SYSTEM">
       <div class="info">
         <h3>WIFI HOTSPOT SYSTEM</h3>
         <p>กดเพื่อดูหลายรูปในอัลบั้ม</p>
       </div>
     </div>
 
-    <div class="album-card" onclick="openAlbum('cleaningservice')">
-      <img src="images/cleaningservice/cleaning1.JPG" alt="CLEANING SERVICE">
+    <div class="album-card" onclick="openAlbum('album5')">
+      <img src="album5-1.JPG" alt="CLEANING SERVICE">
       <div class="info">
         <h3>CLEANING SERVICE</h3>
         <p>กดเพื่อดูหลายรูปในอัลบั้ม</p>
       </div>
     </div>
 
-    <div class="album-card" onclick="openAlbum('gardening')">
-      <img src="images/gardening/gardening1.jpg" alt="GARDENING SERVICE">
+    <div class="album-card" onclick="openAlbum('album6')">
+      <img src="album6-1.JPG" alt="GARDENING SERVICE">
       <div class="info">
         <h3>GARDENING SERVICE</h3>
         <p>กดเพื่อดูหลายรูปในอัลบั้ม</p>
@@ -383,51 +382,158 @@
 
   <script>
     const albums = {
-      networksystem: {
+      album1: {
+        title: "NETWORK SYSTEM",
         images: [
-          "images/networksystem/network1.jpg",
-          "images/networksystem/network2.jpg",
-          "images/networksystem/network3.jpg",
-          "images/networksystem/network4.jpg",
-          "images/networksystem/network5.jpg",
-          "images/networksystem/network6.jpg",
-          "images/networksystem/network7.jpg",
-          "images/networksystem/network8.jpg",
-          "images/networksystem/network9.jpg"
+          "album1-1.JPG",
+          "album1-2.JPG",
+          "album1-3.JPG",
+          "album1-4.jpg",
+          "album1-5.JPG",
+          "album1-6.JPG",
+          "album1-7.JPG",
+          "album1-8.jpg",
+          "album1-9.JPG"
         ]
       },
-      cctvsystem: {
+      album2: {
+        title: "CCTV SYSTEM",
         images: [
-          "images/cctvsystem/cctv1.JPG",
-          "images/cctvsystem/cctv2.JPG",
-          "images/cctvsystem/cctv3.JPG",
-          "images/cctvsystem/cctv4.JPG",
-          "images/cctvsystem/cctv5.JPG",
-          "images/cctvsystem/cctv6.JPG",
-          "images/cctvsystem/cctv7.JPG",
-          "images/cctvsystem/cctv8.JPG",
-          "images/cctvsystem/cctv9.JPG",
-          "images/cctvsystem/cctv10.JPG"
+          "album2-1.JPG",
+          "album2-2.JPG",
+          "album2-3.JPG",
+          "album2-4.JPG",
+          "album2-5.JPG",
+          "album2-6.JPG",
+          "album2-7.JPG",
+          "album2-8.JPG",
+          "album2-9.JPG",
+          "album2-10.JPG"
         ]
       },
-      smartparking: {
+      album3: {
+        title: "SMART PARKING",
         images: [
-          "images/smartparking/smartparking1.JPG",
-          "images/smartparking/smartparking2.JPG",
-          "images/smartparking/smartparking3.jpg",
-          "images/smartparking/smartparking4.jpg",
-          "images/smartparking/smartparking5.jpg",
-          "images/smartparking/smartparking6.jpg",
-          "images/smartparking/smartparking7.jpg",
-          "images/smartparking/smartparking8.jpg"
+          "album3-1.JPG",
+          "album3-2.JPG",
+          "album3-3.JPG",
+          "album3-4.JPG",
+          "album3-5.JPG",
+          "album3-6.JPG",
+          "album3-7.JPG",
+          "album3-8.JPG"
         ]
       },
-      wifihotspotsystem: {
+      album4: {
+        title: "WIFI HOTSPOT SYSTEM",
         images: [
-          "images/wifihotspotsystem/wifihotspot1.jpg",
-          "images/wifihotspotsystem/wifihotspot2.jpg",
-          "images/wifihotspotsystem/wifihotspot3.jpg",
-          "images/wifihotspotsystem/wifihotspot4.jpg",
-          "images/wifihotspotsystem/wifihotspot5.jpg",
-          "images/wifihotspotsystem/wifihotspot6.jpg",
-          "images/
+          "album4-1.JPG",
+          "album4-2.JPG",
+          "album4-3.JPG",
+          "album4-4.JPG",
+          "album4-5.JPG",
+          "album4-6.JPG",
+          "album4-7.JPG",
+          "album4-8.JPG"
+        ]
+      },
+      album5: {
+        title: "CLEANING SERVICE",
+        images: [
+          "album5-1.JPG",
+          "album5-2.JPG",
+          "album5-3.JPG"
+        ]
+      },
+      album6: {
+        title: "GARDENING SERVICE",
+        images: [
+          "album6-1.JPG",
+          "album6-2.JPG",
+          "album6-3.JPG",
+          "album6-4.JPG",
+          "album6-5.JPG",
+          "album6-6.JPG",
+          "album6-7.JPG",
+          "album6-8.JPG",
+          "album6-9.JPG"
+        ]
+      }
+    };
+
+    let currentAlbumImages = [];
+    let currentImageIndex = 0;
+
+    function openAlbum(albumKey) {
+      const album = albums[albumKey];
+      const viewer = document.getElementById("viewer");
+      const albumImages = document.getElementById("albumImages");
+
+      albumImages.innerHTML = "";
+
+      album.images.forEach((image, index) => {
+        const img = document.createElement("img");
+        img.src = image;
+        img.alt = "";
+        img.onclick = function(event) {
+          event.stopPropagation();
+          openLightbox(album.images, index);
+        };
+        albumImages.appendChild(img);
+      });
+
+      viewer.classList.add("active");
+      viewer.scrollIntoView({ behavior: "smooth" });
+    }
+
+    function closeAlbum() {
+      document.getElementById("viewer").classList.remove("active");
+    }
+
+    function openLightbox(images, index) {
+      currentAlbumImages = images;
+      currentImageIndex = index;
+      document.getElementById("lightboxImg").src = currentAlbumImages[currentImageIndex];
+      document.getElementById("lightbox").classList.add("active");
+    }
+
+    function closeLightbox() {
+      document.getElementById("lightbox").classList.remove("active");
+    }
+
+    function prevImage(event) {
+      event.stopPropagation();
+      if (currentAlbumImages.length === 0) return;
+      currentImageIndex = (currentImageIndex - 1 + currentAlbumImages.length) % currentAlbumImages.length;
+      document.getElementById("lightboxImg").src = currentAlbumImages[currentImageIndex];
+    }
+
+    function nextImage(event) {
+      event.stopPropagation();
+      if (currentAlbumImages.length === 0) return;
+      currentImageIndex = (currentImageIndex + 1) % currentAlbumImages.length;
+      document.getElementById("lightboxImg").src = currentAlbumImages[currentImageIndex];
+    }
+
+    document.addEventListener("keydown", function(event) {
+      const lightbox = document.getElementById("lightbox");
+      if (!lightbox.classList.contains("active")) return;
+
+      if (event.key === "ArrowLeft") {
+        currentImageIndex = (currentImageIndex - 1 + currentAlbumImages.length) % currentAlbumImages.length;
+        document.getElementById("lightboxImg").src = currentAlbumImages[currentImageIndex];
+      }
+
+      if (event.key === "ArrowRight") {
+        currentImageIndex = (currentImageIndex + 1) % currentAlbumImages.length;
+        document.getElementById("lightboxImg").src = currentAlbumImages[currentImageIndex];
+      }
+
+      if (event.key === "Escape") {
+        closeLightbox();
+      }
+    });
+  </script>
+
+</body>
+</html>
