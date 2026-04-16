@@ -1,33 +1,146 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CTK SUCCESS | ติดต่อ</title>
-  <style>
-    body { margin: 0; font-family: Arial, sans-serif; background: #f7faff; color: #181818; }
-    a { text-decoration: none; color: inherit; }
-    .container { width: min(1180px, 92%); margin: 0 auto; }
-    .topbar { background: #fff; border-bottom: 1px solid #e8eef8; }
-    .topbar-inner { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; gap: 20px; }
-    .brand { font-size: 22px; font-weight: 700; color: #1c52a3; }
-    .nav { display: flex; gap: 10px; flex-wrap: wrap; }
-    .nav a { padding: 10px 16px; border-radius: 999px; }
-    .nav a:hover, .nav a.active { background: #2b7af0; color: #fff; }
-    .section { padding: 60px 0; }
-    h1, h3 { color: #1c52a3; }
-    .card { background: #fff; border-radius: 24px; box-shadow: 0 10px 30px rgba(28,82,163,.10); padding: 28px; }
-    .btn-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
-    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 13px 20px; border-radius: 999px; font-weight: 700; }
-    .btn-primary { background: #2b7af0; color: #fff; }
-    .btn-secondary { background: #fff; color: #1c52a3; border: 1px solid #dce8ff; }
-    @media (max-width: 980px) { .topbar-inner { display: grid; justify-items: center; } .nav { justify-content: center; } }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CTK SUCCESS | ติดต่อ</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f7faff;
+    margin: 0;
+    color: #181818;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+  }
+
+  .topbar {
+    background: #fff;
+    border-bottom: 1px solid #e8eef8;
+    padding: 15px 0;
+  }
+
+  .topbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .brand {
+    font-weight: bold;
+    font-size: 22px;
+    color: #1c52a3;
+  }
+
+  .nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .nav a {
+    padding: 10px 16px;
+    border-radius: 999px;
+    color: #1c52a3;
+  }
+
+  .nav a.active,
+  .nav a:hover {
+    background: #2b7af0;
+    color: #fff;
+  }
+
+  .section {
+    padding: 50px 0;
+  }
+
+  h1 {
+    color: #1c52a3;
+    margin-bottom: 20px;
+  }
+
+  .card {
+    background: #fff;
+    padding: 28px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  }
+
+  .card p {
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .btn-row {
+    margin-top: 22px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    padding: 12px 18px;
+    border-radius: 30px;
+    font-weight: bold;
+    display: inline-block;
+  }
+
+  .btn-primary {
+    background: #2b7af0;
+    color: #fff;
+  }
+
+  .btn-secondary {
+    background: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+  }
+
+  .btn-line {
+    background: #06C755;
+    color: #fff;
+  }
+
+  .btn-facebook {
+    background: #1877F2;
+    color: #fff;
+  }
+
+  .btn-youtube {
+    background: #FF0000;
+    color: #fff;
+  }
+
+  .btn-tiktok {
+    background: #111;
+    color: #fff;
+  }
+
+  .btn-maps {
+    background: #34A853;
+    color: #fff;
+  }
+</style>
+
 </head>
 <body>
+
 <header class="topbar">
   <div class="container topbar-inner">
-    <a href="index.html" class="brand">CTK SUCCESS</a>
+    <div class="brand">CTK SUCCESS</div>
     <nav class="nav">
       <a href="index.html">หน้าแรก</a>
       <a href="services.html">บริการ</a>
@@ -40,22 +153,26 @@
 <section class="section">
   <div class="container">
     <h1>ติดต่อเรา</h1>
+
     <div class="card">
-      <h3>ข้อมูลติดต่อ</h3>
-      <p><strong>บริษัท ซีทีเค ซัคเซซ จำกัด (สำนักงานใหญ่)</strong></p>
+      <p><b>บริษัท ซีทีเค ซัคเซซ จำกัด (สำนักงานใหญ่)</b></p>
       <p>115 หมู่ 7 ตำบลทะเลชุบศร อำเภอเมือง จังหวัดลพบุรี 15000</p>
-      <p><strong>โทร:</strong> 036-680750</p>
-      <p><strong>อีเมล:</strong> info@ctksuccess.co.th</p>
-      <p><strong>Facebook:</strong> CTK Success co.,ltd.</p>
-      <p><strong>YouTube:</strong> @CTKsuccess</p>
-      <p><strong>TikTok:</strong> @ctk.success</p>
-      <p><strong>เว็บไซต์:</strong> ctksuccess.co.th</p>
+      <p><b>โทร:</b> 036-680750</p>
+      <p><b>อีเมล:</b> info@ctksuccess.co.th</p>
+      <p><b>เว็บไซต์:</b> ctksuccess.co.th</p>
+
       <div class="btn-row">
-        <a class="btn btn-primary" href="https://line.me/ti/p/~@458huboz">แชทผ่าน LINE</a>
-        <a class="btn btn-secondary" href="tel:036680750">โทรหาเรา</a>
+        <a class="btn btn-primary" href="tel:036680750">📞 โทรหาเรา</a>
+        <a class="btn btn-secondary" href="mailto:info@ctksuccess.co.th">✉️ Email</a>
+        <a class="btn btn-line" href="https://line.me/ti/p/~@458huboz" target="_blank">💬 LINE</a>
+        <a class="btn btn-facebook" href="https://www.facebook.com/ctksuccess.it.lopburi?mibextid=wwXIfr&rdid=M5T3jG8z3nYBlEY7&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1E1qNeXPz8%2F%3Fmibextid%3DwwXIfr" target="_blank">Facebook</a>
+        <a class="btn btn-youtube" href="https://www.youtube.com/@CTKsuccess" target="_blank">YouTube</a>
+        <a class="btn btn-tiktok" href="https://www.tiktok.com/@ctk.success?_r=1&_t=ZS-95ZrL63jde0" target="_blank">TikTok</a>
+        <a class="btn btn-maps" href="https://www.google.com/maps/place/%E0%B8%8B%E0%B8%B5%E0%B8%97%E0%B8%B5%E0%B9%80%E0%B8%84+%E0%B8%8B%E0%B8%B1%E0%B8%84%E0%B9%80%E0%B8%8B%E0%B8%8B+%E0%B8%88%E0%B8%B3%E0%B8%81%E0%B8%B1%E0%B8%94/@14.8052213,100.6289073,2823m/data=!3m1!1e3!4m7!3m6!1s0x311e0190ff710391:0xe13a561d1232f53f!8m2!3d14.8126709!4d100.6423672!15sCocBMTE1IOC4q-C4oeC4ueC5iCA3IOC4leC4s-C4muC4peC4l-C4sOC5gOC4peC4iuC4uOC4muC4qOC4oyDguK3guLPguYDguKDguK3guYDguKHguLfguK3guIcg4LiI4Lix4LiH4Lir4Lin4Lix4LiU4Lil4Lie4Lia4Li44Lij4Li1IDE1MDAwkgEQY29ycG9yYXRlX29mZmljZeABAA!16s%2Fg%2F11j65ykt88?entry=tts&g_ep=EgoyMDI2MDQxMy4wIPu8ASoASAFQAw%3D%3D&skid=903bdc81-4564-4a93-9a55-d2258de26614" target="_blank">Google Maps</a>
       </div>
     </div>
   </div>
 </section>
+
 </body>
 </html>
